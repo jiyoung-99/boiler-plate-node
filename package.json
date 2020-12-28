@@ -1,0 +1,19 @@
+{
+  "name": "boiler-plate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiyoung-99/boiler-plate-node.git"
+  },
+  "author": "jiyoung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiyoung-99/boiler-plate-node/issues"
+  },
+  "homepage": "https://github.com/jiyoung-99/boiler-plate-node#readme"
+}
