@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 5000
+
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser')
 const {User} = require('./models/User');
@@ -112,7 +112,17 @@ app.get('/api/users/logout', auth, ( req, res ) => {
 
 })
 
-app.listen(port, () => console.log('Example app listening on port ${port}!'))
+app.get('/api/hello', (req, res) => {
+  
+  
+  
+  res.send('안녕하세요 ~ ')
+})
+
+
+
+const port = 5000
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 // mongodb+srv://dbUser:<password>@boiler-plate-node.inyzj.mongodb.net/test
 
