@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// antd 디자인
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
