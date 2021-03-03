@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser')
 const {User} = require('./models/User');
 const {auth} = require('./middleware/auth');
+const config = require('./config/key')
 
 //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extened:true}));
@@ -15,8 +16,9 @@ app.use(bodyParser.json());
 //cookie parser
 app.use(cookieParser());
 
+
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://dbUser:dbUserPassword@boiler-plate-node.inyzj.mongodb.net/boiler-plate-node?retryWrites=true&w=majority', {
+mongoose.connect(config.mongoURI, {
     useNewUrlParser: true, useUnifiedTopology:true, useCreateIndex: true, useFindAndModify: false
 }).then(()=>console.log('MongoDB Connected....'))
   .catch(err=>console.log(err))
