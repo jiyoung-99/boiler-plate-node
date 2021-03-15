@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser')
 const {User} = require('./models/User');
 const {auth} = require('./middleware/auth');
+//컨피그에 넣은 환경설정 정보들
 const config = require('./config/key')
 
 //application/x-www-form-urlencoded
@@ -52,6 +53,7 @@ app.post('/api/users/login', (req, res) => {
   console.log('req : ', req)
   //요청된 이메일이 데이터베이스에 있는지 확인
   User.findOne({ email:req.body.email }, (err, user) => {
+    //user 가 없다면 res.json으로 loginSuccess 가 false가 된다.
     if(!user) {
       return res.json({
         loginSuccess: false,
